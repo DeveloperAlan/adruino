@@ -14,10 +14,10 @@ void loop() {
   
   // Map thermistor input to a value between 0 and 255 
   value = map(value, low, hi, 0, 255);
-  if (value % 2 == 0) {
-    digitalWrite(led, HIGH);
-  } else 
+  if (value <= 263) {
     digitalWrite(led, LOW);
+  } else 
+    digitalWrite(led, HIGH);
   
 //  analogWrite(led, value); // Set brightness of LED
   Serial.println(value);
