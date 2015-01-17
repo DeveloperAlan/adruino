@@ -27,38 +27,47 @@ void fadeout(int led, int time) {
   }
 }
 
+void white(int led, int led2, int led3) {
+  analogWrite(led, 1);
+  analogWrite(led2, 1);
+  analogWrite(led3, 1);
+}
+
 
 void loop() {
  // Each colour one at a time
- Serial.println("One at a time");
- fadein(ledR,100);
- fadeout(ledR,100);
- fadein(ledG,100);
- fadeout(ledG,100);
- fadein(ledB,100);
- fadeout(ledB,100);
+// Serial.println("One at a time");
+// fadein(ledR,100);
+// fadeout(ledR,100);
+// fadein(ledG,100);
+// fadeout(ledG,100);
+// fadein(ledB,100);
+// fadeout(ledB,100);
  
  // Each colour two at a time
-  Serial.println("Two at a time");
- fadein(ledR,100);
- fadein(ledG,100);
- fadeout(ledR,100);
- fadeout(ledG,100);
- fadein(ledR,100);
- fadein(ledB,100); 
- fadeout(ledR,100);
- fadeout(ledB,100); 
- fadein(ledG,100);
- fadein(ledB,100);
- fadeout(ledG,100);
- fadeout(ledB,100); 
- 
- // Each colour three at a time
-  Serial.println("Three at a time");
- fadein(ledR,100);
- fadein(ledG,100);
- fadein(ledB,100);
- fadeout(ledR,100);
- fadeout(ledG,100);
- fadeout(ledB,100); 
+//  Serial.println("Two at a time");
+// fadein(ledR,100);
+// fadein(ledG,100);
+// fadeout(ledR,100);
+// fadeout(ledG,100);
+// fadein(ledR,100);
+// fadein(ledB,100); 
+// fadeout(ledR,100);
+// fadeout(ledB,100); 
+// fadein(ledG,100);
+// fadein(ledB,100);
+// fadeout(ledG,100);
+// fadeout(ledB,100); 
+// 
+// // Each colour three at a time
+//  Serial.println("Three at a time");
+// fadein(ledR,100);
+// fadein(ledG,100);
+// fadein(ledB,100);
+// fadeout(ledR,100);
+// fadeout(ledG,100);
+// fadeout(ledB,100); 
+
+white(ledR, ledG, ledB);
+
 }
