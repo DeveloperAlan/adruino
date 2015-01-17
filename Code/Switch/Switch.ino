@@ -9,11 +9,12 @@ void setup() {
 
 void loop() {
   // If switch is on 
-  if (digitalRead(button) == HIGH) {
+  if (digitalRead(button) == LOW) {
     digitalWrite(led,HIGH); // Turn LED on
     Serial.println("Switch on");
   }
   else {
     digitalWrite(led,LOW); // Turn LED off
+    Serial.println("Switch off");
   }
 }

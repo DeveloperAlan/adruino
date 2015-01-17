@@ -1,7 +1,7 @@
-int led = 3; // Digital pin 3
+ int led = 3; // Digital pin 3
 
 // May need to modify these values
-long low = 480; // Roughtly room temp
+long low = 300; // Roughtly room temp
 long hi = 600; // Roughtly body temp
 
 void setup() {
@@ -14,7 +14,11 @@ void loop() {
   
   // Map thermistor input to a value between 0 and 255 
   value = map(value, low, hi, 0, 255);
+  if (value % 2 == 0) {
+    digitalWrite(led, HIGH);
+  } else 
+    digitalWrite(led, LOW);
   
-  analogWrite(led, value); // Set brightness of LED
+//  analogWrite(led, value); // Set brightness of LED
   Serial.println(value);
 }
