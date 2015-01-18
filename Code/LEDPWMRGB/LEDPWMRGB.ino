@@ -8,7 +8,8 @@ void setup() {
   Serial.begin(9600); // Tuen serial monitor on
   pinMode(ledR, OUTPUT); // Make pin 3 an output
   pinMode(ledG, OUTPUT); // Make pin 5 an output
-  pinMode(ledB, OUTPUT); // Make pin 6 an output 
+  pinMode(ledB, INTPUT); // Make pin 6 an output 
+  
 }
 
 // Fade in a LED
